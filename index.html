@@ -13,7 +13,6 @@
     <link rel="stylesheet" type"text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 </head>
 <body>
    <header>
@@ -31,8 +30,7 @@
                 <a href="#" class="social_link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="#" class="social_link"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
             </div>
-            <div class="banner_info">
-                  
+            <div class="banner_info"> 
                 <h1>Chatbot which helps millennials</h1>
                 <h2>Find unique attractions</h2> 
                 <button class="btn">Get Started</button>
@@ -44,7 +42,6 @@
             <p>Powered by artificial intelligence</p>
             <p>Designed by travelers</p>
         </div>
-
         <div class="gallery">  
             <div class="gallery_item_night_life" >
                 <img src="img/night_life.png ">  
@@ -76,7 +73,6 @@
                             <p> Nulla malesuada fermentum purus. Nullam blandit ligula eget hendrerit ultricies. Suspendisse potenti. Phasellus euismod ultrices ligula, venenatis suscipit mauris tempor id.</p>  
                     <button class="btn">Get Started</button>
                 </div>    
-                      
                     <div class="slider">
                         <ul class="images">
                             <li>
@@ -96,7 +92,6 @@
                             <li><img src="img/icon.png"></li>
                         </ul>
                     </div>
-
             <div class="social_navigation">
                 <div class="social_name">
                     <h5>Social</h5>
@@ -122,7 +117,7 @@
 
 var buttons = $('ul.buttons li');
 var images = $('ul.images li');
-
+            
 buttons.first().addClass('active');
 images.hide().first().show();
 
@@ -130,14 +125,12 @@ function sliderResponse(target) {
     images.fadeOut(300).eq(target).fadeIn(300);
     buttons.removeClass('active').eq(target).addClass('active');
 }
-
 buttons.click(function() {
     if ( !$(this).hasClass('active') ) {
         target = $(this).index();
         sliderResponse(target);
     }
 });
-
 
 $(document).ready(function() {
  $(".full_slider").each(function () {
